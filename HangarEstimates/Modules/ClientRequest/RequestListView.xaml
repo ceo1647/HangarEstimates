@@ -1,0 +1,140 @@
+﻿<UserControl x:Class="HangarEstimates.Modules.ClientRequest.RequestListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:converters="clr-namespace:HangarEstimates.Infrastructure.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>            
+        </Grid.RowDefinitions>
+        <Border CornerRadius="10" 
+                Grid.Row="0"
+                Margin="10 10 10 10"
+                Background="#99FFFFFF" >
+                <!--<DataGrid x:Name="DataGrid"
+                          Margin="10 10 10 10"
+                    CanUserAddRows="False" 
+                          Background="Transparent"
+                          ItemsSource="{Binding Items}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Номер заявки" Binding="{Binding Model.Name}"/>
+                        <DataGridTextColumn Header="Клиент" Binding="{Binding Model.Client}"/>
+                    </DataGrid.Columns>
+                </DataGrid>-->
+
+            <ListView x:Name="RequestList"
+                BorderThickness="0"
+                      Margin="10 10 10 10"
+                  Background="Transparent"
+                  ItemsSource="{Binding Path=Items}" 
+                  SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}"  AlternationCount="2"
+                  IsSynchronizedWithCurrentItem="True" >
+
+                <ListView.View>
+                    <GridView AllowsColumnReorder="true" >
+                        <GridViewColumn Header="№">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock FontSize="14" FontWeight="Bold" Text="{Binding Path=Model.Id, Mode=OneWay}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        <GridViewColumn Header="Заказчик">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock>
+                                        <Hyperlink Command="{Binding DataContext.EditClientCommand, ElementName=RequestList}" CommandParameter="{Binding Model.Client}">
+                                            <TextBlock Text="{Binding Model.Client, Converter={converters:ClientNameConverter}}"/>
+                                        </Hyperlink>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Город" DisplayMemberBinding="{Binding Path=Model.HangarCity, Mode=OneWay}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ComboBox SelectedItem="{Binding Path=Model.HangarCity, Mode=TwoWay}" ItemsSource="{Binding DataContext.AwaliableCities, ElementName=RequestList}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Model.HangarCity.WindRegion, Mode=OneWay}">
+                            <GridViewColumn.HeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="Wrap" Text="Ветровой район"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.HeaderTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Model.HangarCity.SnowRegion, Mode=OneWay}">
+                            <GridViewColumn.HeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="Wrap" Text="Снеговой район"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.HeaderTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Характеристики Ангра">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock>
+                                        <Hyperlink Command="{Binding DataContext.EditHangarCommand, ElementName=RequestList}" CommandParameter="{Binding Model.Hangar}">
+                                            <TextBlock Text="{Binding Model.Hangar}" TextWrapping="Wrap"/>
+                                        </Hyperlink>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        
+                        <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding Path=Model.Date, Mode=OneWay, ConverterCulture=ru-RU, StringFormat={}dd.MM.yyyy}"/>
+                        <GridViewColumn Header="Состояние заказа" DisplayMemberBinding="{Binding Path=Model.Condition, Mode=OneWay}"/>
+                        <GridViewColumn Header="Смета">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock>
+                                        <Hyperlink Command="{Binding DataContext.ShowEstimateCommand, ElementName=RequestList}">
+                                            <TextBlock Text="Показать"/>
+                                        </Hyperlink>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <!--     <GridViewColumn Header="Опубл." DisplayMemberBinding="{Binding Path=IsPublish, Mode=OneWay}"/>-->
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Border>
+        
+        <Grid Grid.Row="1"> 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Margin="10 0 0 0" Command="{Binding EditCatalogsCommand}" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Template="{StaticResource CompleteButtonTemplate}">
+                Справочники ...
+            </Button>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Command="{Binding AddRequestCommand}" 
+                Height="30"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Template="{StaticResource SubmitButtonTemplate}">Добавить</Button>
+
+                <Button Command="{Binding RemoveRequestCommand}" 
+                Height="30"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Template="{StaticResource SubmitRightButtonTemplate}">Удалить</Button>
+            </StackPanel>
+        </Grid>
+        
+        
+
+        
+
+    </Grid>
+</UserControl>
+    

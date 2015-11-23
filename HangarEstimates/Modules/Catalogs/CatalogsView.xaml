@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="HangarEstimates.Modules.Catalogs.CatalogsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:inf="clr-namespace:HangarEstimates.Infrastructure"
+             xmlns:regions="http://www.codeplex.com/CompositeWPF"
+             xmlns:catalogs="clr-namespace:HangarEstimates.Modules.Catalogs"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Border MaxHeight="800" MaxWidth="600" CornerRadius="10 0 10 0">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                <GradientStop Color="#FFB9E7E7" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+                <TabControl Margin="10"
+                            BorderBrush="Gainsboro">
+                    <TabControl.Resources>
+                        <Style TargetType="TabItem">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="TabItem">
+                                        <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="Gainsboro" CornerRadius="4,4,0,0" Margin="2,0">
+                                            <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header"
+                                        Margin="10,2"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter TargetName="Border" Property="Background" Value="LightSkyBlue" />
+                                            </Trigger>
+                                            <Trigger Property="IsSelected" Value="False">
+                                                <Setter TargetName="Border" Property="Background" Value="GhostWhite" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TabControl.Resources>
+                    <TabItem Header="{x:Static catalogs:CatalogsNames.Gates}">
+                        <catalogs:GatesCatalogView/>
+                    </TabItem>
+                    <TabItem Header="Окна" >
+                        <catalogs:WindsCatalogView/>
+                    </TabItem>
+                    <TabItem Header="Типы фундамента" >
+                        <catalogs:SubstuctureTypeView/>
+                    </TabItem>
+                    <TabItem Header="Типы утепления" >
+                        <catalogs:InsulationTypeView/>
+                    </TabItem>
+                    <TabItem Header="Дополнительные виды работ" >
+                        <catalogs:AdditionConstructionView/>
+                    </TabItem>
+                    <TabItem Header="ТУ на фундамент" >
+                        <catalogs:SubstuctureTypeTuView/>
+                    </TabItem>
+                    <TabItem Header="Снеговой и ветровой районы" >
+                        <catalogs:CityCatalogView/>
+                    </TabItem>
+                </TabControl>
+
+            </Grid>
+
+        </Border>
+
+        <StackPanel Grid.Row="1" Margin="0 10 0 0" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Command="{Binding AcceptCommand}" 
+                Height="30"
+                HorizontalAlignment="Right"
+                Template="{StaticResource CompleteButtonTemplate}">Закрыть</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

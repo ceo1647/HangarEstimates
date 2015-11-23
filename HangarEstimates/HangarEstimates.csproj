@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F957DDE7-A227-4145-BC08-6D90E42514CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HangarEstimates</RootNamespace>
+    <AssemblyName>HangarEstimates</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Expression.Interactions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.UnityExtensions.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NSubstitute, Version=1.8.1.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\NSubstitute.1.8.1.0\lib\net40\NSubstitute.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PrismMVVMLibrary, Version=1.0.22.42, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PrismMVVMLibrary.2.0.0.10\lib\net40\PrismMVVMLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PropertyChanged, Version=1.50.3.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
+      <HintPath>..\packages\PropertyChanged.Fody.1.50.3\Lib\portable-net4+sl4+wp8+win8+wpa81+MonoAndroid16+MonoTouch40\PropertyChanged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Bll\Address.cs" />
+    <Compile Include="Bll\BankAccount.cs" />
+    <Compile Include="Bll\Catalogs\AdditionConstruction.cs" />
+    <Compile Include="Bll\Catalogs\ConstructionBase.cs" />
+    <Compile Include="Bll\Catalogs\EWindPosition.cs" />
+    <Compile Include="Bll\Catalogs\InsulationType.cs" />
+    <Compile Include="Bll\Catalogs\WindPlacement.cs" />
+    <Compile Include="Bll\Contact.cs" />
+    <Compile Include="Bll\TU\SubstuctureTypeTU.cs" />
+    <Compile Include="Infrastructure\Composite\IRegionManagerAware.cs" />
+    <Compile Include="Infrastructure\Composite\ModuleBase.cs" />
+    <Compile Include="Infrastructure\Composite\NavigationParametersCache.cs" />
+    <Compile Include="Infrastructure\Composite\NavigationParamters\OpenContractorsListParams.cs" />
+    <Compile Include="Infrastructure\Composite\NavigationService.cs" />
+    <Compile Include="Infrastructure\Composite\OpenUriService.cs" />
+    <Compile Include="Infrastructure\Composite\ParameterizedNavigationVmBase.cs" />
+    <Compile Include="Infrastructure\Controls\Combobox.cs" />
+    <Compile Include="Infrastructure\Controls\EditableComboBox.cs" />
+    <Compile Include="Infrastructure\Controls\KeyValueComboControl.xaml.cs">
+      <DependentUpon>KeyValueComboControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Controls\KeyValueControl.xaml.cs">
+      <DependentUpon>KeyValueControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Controls\KeyValueTextableComboControl.xaml.cs">
+      <DependentUpon>KeyValueTextableComboControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Controls\WpfModalDialog.xaml.cs">
+      <DependentUpon>WpfModalDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Converters\Converters.cs" />
+    <Compile Include="Infrastructure\Converters\MarkupConverterBase.cs" />
+    <Compile Include="Infrastructure\Converters\MultiValueMarkupConverterBase.cs" />
+    <Compile Include="Infrastructure\Events\ChangeAcceptedEvent.cs" />
+    <Compile Include="Infrastructure\Interfaces\Services\IRepository.cs" />
+    <Compile Include="Infrastructure\Interfaces\Services\IYesNoUserAnswerService.cs" />
+    <Compile Include="Infrastructure\MVVM\ObservableCollectionWrapper.cs" />
+    <Compile Include="Infrastructure\RegionNames.cs" />
+    <Compile Include="Infrastructure\Utils\ConvertUtils.cs" />
+    <Compile Include="Infrastructure\ViewNames.cs" />
+    <Compile Include="Modules\Catalogs\AdditionConstructionView.xaml.cs">
+      <DependentUpon>AdditionConstructionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Catalogs\CatalogsModule.cs" />
+    <Compile Include="Modules\Catalogs\CatalogsNames.cs" />
+    <Compile Include="Modules\Catalogs\CatalogsView.xaml.cs">
+      <DependentUpon>CatalogsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Catalogs\CatalogsVm.cs" />
+    <Compile Include="Modules\Catalogs\CatalogVm.cs" />
+    <Compile Include="Modules\Catalogs\CityCatalogView.xaml.cs">
+      <DependentUpon>CityCatalogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Catalogs\CityCatalogVm.cs" />
+    <Compile Include="Modules\Catalogs\GatesCatalogView.xaml.cs">
+      <DependentUpon>GatesCatalogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Catalogs\GatesCatalogVm.cs" />
+    <Compile Include="Modules\Catalogs\InsulationTypeView.xaml.cs">
+      <DependentUpon>InsulationTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Catalogs\SubstuctureTypeTuView.xaml.cs">
+      <DependentUpon>SubstuctureTypeTuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Catalogs\SubstuctureTypeView.xaml.cs">
+      <DependentUpon>SubstuctureTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Catalogs\WindsCatalogView.xaml.cs">
+      <DependentUpon>WindsCatalogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Catalogs\WindsCatalogVm.cs" />
+    <Compile Include="Modules\ClientRequest\ClientRequestModule.cs" />
+    <Compile Include="Modules\ClientRequest\ClientRequestView.xaml.cs">
+      <DependentUpon>ClientRequestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ClientRequest\Design\DesignClientRequestModule.cs" />
+    <Compile Include="Modules\ClientRequest\Design\DesignClientRequestVm.cs" />
+    <Compile Include="Modules\ClientRequest\HangarCityVm.cs" />
+    <Compile Include="Modules\Contractors\ContractorDetailsView.xaml.cs">
+      <DependentUpon>ContractorDetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Contractors\ContractorDetailsVM.cs" />
+    <Compile Include="Modules\Contractors\ContractorsListView.xaml.cs">
+      <DependentUpon>ContractorsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Contractors\ContractorsListVM.cs" />
+    <Compile Include="Modules\Contractors\Design\DesignContractorsModule.cs" />
+    <Compile Include="Modules\Contractors\IContractorsListVM.cs" />
+    <Compile Include="Modules\DesignServices\DesignRepository.cs" />
+    <Compile Include="Modules\DesignServices\DesignServicesModule.cs" />
+    <Compile Include="Modules\DesignServices\DictionaryRepositoryBase.cs" />
+    <Compile Include="Modules\DesignServices\YesNoUserAnswerService.cs" />
+    <Compile Include="Modules\HangarEdit\HangarEditModule.cs" />
+    <Compile Include="Modules\HangarEdit\HangarEditView.xaml.cs">
+      <DependentUpon>HangarEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HangarEdit\HangarEditVm.cs" />
+    <Compile Include="Infrastructure\MVVM\ItemVm.cs" />
+    <Compile Include="Modules\HangarEdit\HangarVm.cs" />
+    <Compile Include="ShellController.cs" />
+    <Page Include="Infrastructure\Controls\KeyValueComboControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Infrastructure\Controls\KeyValueControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Infrastructure\Controls\KeyValueTextableComboControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Infrastructure\Controls\WpfModalDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Catalogs\AdditionConstructionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Catalogs\CatalogsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Catalogs\CityCatalogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Catalogs\GatesCatalogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Catalogs\InsulationTypeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Catalogs\SubstuctureTypeTuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Catalogs\SubstuctureTypeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Catalogs\WindsCatalogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\ClientRequest\RequestListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Contractors\ContractorDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Contractors\ContractorsListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\HangarEdit\HangarEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bll\BaseObject.cs" />
+    <Compile Include="Bll\Catalogs\City.cs" />
+    <Compile Include="Bll\Catalogs\Gate.cs" />
+    <Compile Include="Bll\Catalogs\SnowRegion.cs" />
+    <Compile Include="Bll\Catalogs\Wind.cs" />
+    <Compile Include="Bll\Catalogs\WindRegion.cs" />
+    <Compile Include="Bll\Client.cs" />
+    <Compile Include="Bll\EndWall.cs" />
+    <Compile Include="Bll\ERequestCondition.cs" />
+    <Compile Include="Bll\Hangar.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Bll\Catalogs\SubstuctureType.cs" />
+    <Compile Include="Bll\Request.cs" />
+    <Compile Include="Modules\ClientRequest\Design\DesignRequestListVm.cs" />
+    <Compile Include="Modules\ClientRequest\IClientRequestVm.cs" />
+    <Compile Include="Modules\ClientRequest\IRequestListVm.cs" />
+    <Compile Include="Modules\ClientRequest\RequestListView.xaml.cs">
+      <DependentUpon>RequestListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ClientRequest\RequestVm.cs" />
+    <Compile Include="Shell.xaml.cs">
+      <DependentUpon>Shell.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Modules\ClientRequest\ClientRequestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Bll\Model.cd" />
+    <Content Include="Documents\test.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\test2.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="_Design\Расчет Пример.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bll\Services\" />
+    <Folder Include="DAL\Design\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\hangar_type_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\hangarIcon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.1.29.3\build\portable-net+sl+win+wpa+wp\Fody.targets" Condition="Exists('..\packages\Fody.1.29.3\build\portable-net+sl+win+wpa+wp\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.1.29.3\build\portable-net+sl+win+wpa+wp\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.1.29.3\build\portable-net+sl+win+wpa+wp\Fody.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
