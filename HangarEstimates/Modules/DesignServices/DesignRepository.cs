@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using HangarEstimates.Bll;
+﻿using HangarEstimates.Bll;
 
 namespace HangarEstimates.Modules.DesignServices
 {

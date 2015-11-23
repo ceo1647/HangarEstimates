@@ -8,11 +8,11 @@
         /// <summary>
         /// Ширина ворот
         /// </summary>
-        public double Width { get; set; }
+        public virtual double Width { get; set; }
         /// <summary>
         /// Высота ворот
         /// </summary>
-        public double Height { get; set; }
+        public virtual double Height { get; set; }
 
         public override string ToString()
         {

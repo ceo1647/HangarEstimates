@@ -72,8 +72,16 @@
       <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.7\lib\net40\Mono.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.7\lib\net40\Npgsql.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NSubstitute, Version=1.8.1.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
@@ -111,15 +119,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Bll\Address.cs" />
-    <Compile Include="Bll\BankAccount.cs" />
-    <Compile Include="Bll\Catalogs\AdditionConstruction.cs" />
-    <Compile Include="Bll\Catalogs\ConstructionBase.cs" />
-    <Compile Include="Bll\Catalogs\EWindPosition.cs" />
-    <Compile Include="Bll\Catalogs\InsulationType.cs" />
-    <Compile Include="Bll\Catalogs\WindPlacement.cs" />
-    <Compile Include="Bll\Contact.cs" />
-    <Compile Include="Bll\TU\SubstuctureTypeTU.cs" />
+    <Compile Include="Dal\DalModule.cs" />
+    <Compile Include="Dal\Mapping\WindMap.cs" />
+    <Compile Include="Dal\SessionFactory.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\BankAccount.cs" />
+    <Compile Include="Model\Catalogs\AdditionConstruction.cs" />
+    <Compile Include="Model\Catalogs\ConstructionBase.cs" />
+    <Compile Include="Model\Catalogs\EWindPosition.cs" />
+    <Compile Include="Model\Catalogs\InsulationType.cs" />
+    <Compile Include="Model\Catalogs\WindPlacement.cs" />
+    <Compile Include="Model\Contact.cs" />
+    <Compile Include="Model\TU\SubstuctureTypeTU.cs" />
     <Compile Include="Infrastructure\Composite\IRegionManagerAware.cs" />
     <Compile Include="Infrastructure\Composite\ModuleBase.cs" />
     <Compile Include="Infrastructure\Composite\NavigationParametersCache.cs" />
@@ -283,19 +294,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Bll\BaseObject.cs" />
-    <Compile Include="Bll\Catalogs\City.cs" />
-    <Compile Include="Bll\Catalogs\Gate.cs" />
-    <Compile Include="Bll\Catalogs\SnowRegion.cs" />
-    <Compile Include="Bll\Catalogs\Wind.cs" />
-    <Compile Include="Bll\Catalogs\WindRegion.cs" />
-    <Compile Include="Bll\Client.cs" />
-    <Compile Include="Bll\EndWall.cs" />
-    <Compile Include="Bll\ERequestCondition.cs" />
-    <Compile Include="Bll\Hangar.cs" />
+    <Compile Include="Model\BaseObject.cs" />
+    <Compile Include="Model\Catalogs\City.cs" />
+    <Compile Include="Model\Catalogs\Gate.cs" />
+    <Compile Include="Model\Catalogs\SnowRegion.cs" />
+    <Compile Include="Model\Catalogs\Wind.cs" />
+    <Compile Include="Model\Catalogs\WindRegion.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\EndWall.cs" />
+    <Compile Include="Model\ERequestCondition.cs" />
+    <Compile Include="Model\Hangar.cs" />
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Bll\Catalogs\SubstuctureType.cs" />
-    <Compile Include="Bll\Request.cs" />
+    <Compile Include="Model\Catalogs\SubstuctureType.cs" />
+    <Compile Include="Model\Request.cs" />
     <Compile Include="Modules\ClientRequest\Design\DesignRequestListVm.cs" />
     <Compile Include="Modules\ClientRequest\IClientRequestVm.cs" />
     <Compile Include="Modules\ClientRequest\IRequestListVm.cs" />
@@ -335,7 +346,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="Bll\Model.cd" />
+    <None Include="Model\Model.cd" />
     <Content Include="Documents\test.docx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -351,8 +362,8 @@
     <None Include="_Design\Расчет Пример.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Bll\Services\" />
-    <Folder Include="DAL\Design\" />
+    <Folder Include="Model\Services\" />
+    <Folder Include="_DataBase\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\background.jpg" />
