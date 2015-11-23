@@ -122,15 +122,16 @@
     <Compile Include="Dal\DalModule.cs" />
     <Compile Include="Dal\Mapping\WindMap.cs" />
     <Compile Include="Dal\SessionFactory.cs" />
-    <Compile Include="Model\Address.cs" />
-    <Compile Include="Model\BankAccount.cs" />
-    <Compile Include="Model\Catalogs\AdditionConstruction.cs" />
-    <Compile Include="Model\Catalogs\ConstructionBase.cs" />
-    <Compile Include="Model\Catalogs\EWindPosition.cs" />
-    <Compile Include="Model\Catalogs\InsulationType.cs" />
-    <Compile Include="Model\Catalogs\WindPlacement.cs" />
-    <Compile Include="Model\Contact.cs" />
-    <Compile Include="Model\TU\SubstuctureTypeTU.cs" />
+    <Compile Include="Infrastructure\Interfaces\Dal\ISessionFactory.cs" />
+    <Compile Include="Domain\Address.cs" />
+    <Compile Include="Domain\BankAccount.cs" />
+    <Compile Include="Domain\Catalogs\AdditionConstruction.cs" />
+    <Compile Include="Domain\Catalogs\ConstructionBase.cs" />
+    <Compile Include="Domain\Catalogs\EWindPosition.cs" />
+    <Compile Include="Domain\Catalogs\InsulationType.cs" />
+    <Compile Include="Domain\Catalogs\WindPlacement.cs" />
+    <Compile Include="Domain\Contact.cs" />
+    <Compile Include="Domain\TU\SubstuctureTypeTU.cs" />
     <Compile Include="Infrastructure\Composite\IRegionManagerAware.cs" />
     <Compile Include="Infrastructure\Composite\ModuleBase.cs" />
     <Compile Include="Infrastructure\Composite\NavigationParametersCache.cs" />
@@ -294,19 +295,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Model\BaseObject.cs" />
-    <Compile Include="Model\Catalogs\City.cs" />
-    <Compile Include="Model\Catalogs\Gate.cs" />
-    <Compile Include="Model\Catalogs\SnowRegion.cs" />
-    <Compile Include="Model\Catalogs\Wind.cs" />
-    <Compile Include="Model\Catalogs\WindRegion.cs" />
-    <Compile Include="Model\Client.cs" />
-    <Compile Include="Model\EndWall.cs" />
-    <Compile Include="Model\ERequestCondition.cs" />
-    <Compile Include="Model\Hangar.cs" />
+    <Compile Include="Domain\BaseObject.cs" />
+    <Compile Include="Domain\Catalogs\City.cs" />
+    <Compile Include="Domain\Catalogs\Gate.cs" />
+    <Compile Include="Domain\Catalogs\SnowRegion.cs" />
+    <Compile Include="Domain\Catalogs\Wind.cs" />
+    <Compile Include="Domain\Catalogs\WindRegion.cs" />
+    <Compile Include="Domain\Client.cs" />
+    <Compile Include="Domain\EndWall.cs" />
+    <Compile Include="Domain\ERequestCondition.cs" />
+    <Compile Include="Domain\Hangar.cs" />
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Model\Catalogs\SubstuctureType.cs" />
-    <Compile Include="Model\Request.cs" />
+    <Compile Include="Domain\Catalogs\SubstuctureType.cs" />
+    <Compile Include="Domain\Request.cs" />
     <Compile Include="Modules\ClientRequest\Design\DesignRequestListVm.cs" />
     <Compile Include="Modules\ClientRequest\IClientRequestVm.cs" />
     <Compile Include="Modules\ClientRequest\IRequestListVm.cs" />
@@ -346,7 +347,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="Model\Model.cd" />
+    <None Include="Domain\Model.cd" />
     <Content Include="Documents\test.docx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -362,7 +363,7 @@
     <None Include="_Design\Расчет Пример.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\Services\" />
+    <Folder Include="Domain\Services\" />
     <Folder Include="_DataBase\" />
   </ItemGroup>
   <ItemGroup>
