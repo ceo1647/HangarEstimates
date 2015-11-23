@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HangarEstimates.Bll;
+using HangarEstimates.Domain;
 
 namespace HangarEstimates.Modules.HangarEdit
 {

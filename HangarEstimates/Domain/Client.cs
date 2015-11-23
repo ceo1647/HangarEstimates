@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using PropertyChanged;
 
-namespace HangarEstimates.Bll
+namespace HangarEstimates.Domain
 {
     [ImplementPropertyChanged]
     public class Client : BaseObject

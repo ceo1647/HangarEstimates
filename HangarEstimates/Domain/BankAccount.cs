@@ -1,6 +1,6 @@
 ﻿using PropertyChanged;
 
-namespace HangarEstimates.Bll
+namespace HangarEstimates.Domain
 {
     [ImplementPropertyChanged]
     public class BankAccount

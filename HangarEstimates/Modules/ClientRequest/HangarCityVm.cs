@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HangarEstimates.Bll.Catalogs;
+using HangarEstimates.Domain.Catalogs;
 using PrismMVVMLibrary;
 
 namespace HangarEstimates.Modules.ClientRequest

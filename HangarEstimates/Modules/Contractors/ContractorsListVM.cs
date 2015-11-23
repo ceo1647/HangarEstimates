@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
-using HangarEstimates.Bll;
+using HangarEstimates.Domain;
 using HangarEstimates.Infrastructure;
 using HangarEstimates.Infrastructure.Composite;
 using HangarEstimates.Infrastructure.Interfaces.Services;

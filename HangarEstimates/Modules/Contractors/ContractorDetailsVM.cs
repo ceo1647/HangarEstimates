@@ -1,5 +1,5 @@
 ﻿using System.Collections.ObjectModel;
-using HangarEstimates.Bll;
+using HangarEstimates.Domain;
 
 namespace HangarEstimates.Modules.Contractors
 {

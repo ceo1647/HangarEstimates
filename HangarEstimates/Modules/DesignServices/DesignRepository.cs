@@ -1,4 +1,4 @@
-﻿using HangarEstimates.Bll;
+﻿using HangarEstimates.Domain;
 
 namespace HangarEstimates.Modules.DesignServices
 {

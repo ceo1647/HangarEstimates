@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using HangarEstimates.Bll;
-using HangarEstimates.Bll.Catalogs;
-using HangarEstimates.Bll.TU;
+using HangarEstimates.Domain;
+using HangarEstimates.Domain.Catalogs;
+using HangarEstimates.Domain.TU;
 using HangarEstimates.Infrastructure.Composite;
 using HangarEstimates.Infrastructure.Interfaces.Services;
 using HangarEstimates.Modules.ClientRequest.Design;

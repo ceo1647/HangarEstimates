@@ -1,6 +1,6 @@
 ﻿
 
-namespace HangarEstimates.Bll.Catalogs
+namespace HangarEstimates.Domain.Catalogs
 {
     public class AdditionConstruction : ConstructionBase
     {

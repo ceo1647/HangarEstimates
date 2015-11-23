@@ -1,4 +1,4 @@
-﻿using HangarEstimates.Bll;
+﻿using HangarEstimates.Domain;
 using Microsoft.Practices.Prism.Commands;
 using PrismMVVMLibrary;
 

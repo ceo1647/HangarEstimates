@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using HangarEstimates.Bll.Catalogs;
+using HangarEstimates.Domain.Catalogs;
 using HangarEstimates.Infrastructure.Utils;
 using PropertyChanged;
 
-namespace HangarEstimates.Bll
+namespace HangarEstimates.Domain
 {
     /// <summary>
     /// Класс конструктивных элементов ангара

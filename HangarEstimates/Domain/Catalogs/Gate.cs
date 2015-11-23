@@ -1,4 +1,4 @@
-﻿namespace HangarEstimates.Bll.Catalogs
+﻿namespace HangarEstimates.Domain.Catalogs
 {
     /// <summary>
     /// Ворота

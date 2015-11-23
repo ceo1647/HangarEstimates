@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Data;
-using HangarEstimates.Bll;
+using HangarEstimates.Domain;
 
 namespace HangarEstimates.Infrastructure.Converters
 {

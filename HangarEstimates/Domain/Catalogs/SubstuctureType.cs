@@ -3,7 +3,7 @@
 // TODO: Update copyright text.
 // </copyright>
 // -----------------------------------------------------------------------
-namespace HangarEstimates.Bll.Catalogs
+namespace HangarEstimates.Domain.Catalogs
 {
     /// <summary>
     /// Тип фундамента

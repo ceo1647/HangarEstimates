@@ -1,6 +1,6 @@
 ﻿using PropertyChanged;
 
-namespace HangarEstimates.Bll.Catalogs
+namespace HangarEstimates.Domain.Catalogs
 {
     [ImplementPropertyChanged]
     public class City : BaseObject

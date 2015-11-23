@@ -5,10 +5,10 @@
 // -----------------------------------------------------------------------
 
 using System;
-using HangarEstimates.Bll.Catalogs;
+using HangarEstimates.Domain.Catalogs;
 using PropertyChanged;
 
-namespace HangarEstimates.Bll
+namespace HangarEstimates.Domain
 {
     /// <summary>
     /// Требование пользователя

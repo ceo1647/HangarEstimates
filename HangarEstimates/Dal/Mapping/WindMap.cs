@@ -1,5 +1,5 @@
 ﻿using FluentNHibernate.Mapping;
-using HangarEstimates.Bll.Catalogs;
+using HangarEstimates.Domain.Catalogs;
 
 namespace HangarEstimates.Dal.Mapping
 {

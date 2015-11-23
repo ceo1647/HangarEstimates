@@ -1,4 +1,4 @@
-﻿namespace HangarEstimates.Bll
+﻿namespace HangarEstimates.Domain
 {
     public enum ERequestCondition
     {

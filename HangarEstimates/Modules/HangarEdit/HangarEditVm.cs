@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using HangarEstimates.Bll;
-using HangarEstimates.Bll.Catalogs;
+using HangarEstimates.Domain;
+using HangarEstimates.Domain.Catalogs;
 using HangarEstimates.Infrastructure;
 using HangarEstimates.Infrastructure.Composite;
 using HangarEstimates.Infrastructure.Events;

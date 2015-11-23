@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using HangarEstimates.Bll.Catalogs;
+using HangarEstimates.Domain.Catalogs;
 
-namespace HangarEstimates.Bll
+namespace HangarEstimates.Domain
 {
     /// <summary>
     /// Торец
