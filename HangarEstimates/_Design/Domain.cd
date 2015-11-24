@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HangarEstimates.Domain.Catalogs.AdditionConstruction" Collapsed="true">
+    <Position X="1.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Catalogs\AdditionConstruction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Catalogs.WindRegion" Collapsed="true">
+    <Position X="13" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Domain\Catalogs\WindRegion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Catalogs.City" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAABAAAAAAEAAAAAAQAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Domain\Catalogs\City.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Catalogs.ConstructionBase" Collapsed="true">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Catalogs\ConstructionBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Catalogs.Gate" Collapsed="true">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAEAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Catalogs\Gate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Catalogs.InsulationType" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Catalogs\InsulationType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Catalogs.SnowRegion" Collapsed="true">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Domain\Catalogs\SnowRegion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Catalogs.SubstuctureType" Collapsed="true">
+    <Position X="3.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Catalogs\SubstuctureType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Catalogs.Wind" Collapsed="true">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAEAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Catalogs\Wind.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Catalogs.WindPlacement" Collapsed="true">
+    <Position X="11.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Domain\Catalogs\WindPlacement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.TU.SubstuctureTypeTU" Collapsed="true">
+    <Position X="10.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAACgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\TU\SubstuctureTypeTU.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Address" Collapsed="true">
+    <Position X="19.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Hangar" Collapsed="true">
+    <Position X="2" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAgAABQBAAgAEAAAAAEAAAAQAAEAAAAACAQCAAAA=</HashCode>
+      <FileName>Domain\Hangar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.BankAccount" Collapsed="true">
+    <Position X="17.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAEAEAAAAAAAAAAAACA=</HashCode>
+      <FileName>Domain\BankAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.BaseObject" Collapsed="true">
+    <Position X="14.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\BaseObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Client" Collapsed="true">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAAAABAAAAgAA=</HashCode>
+      <FileName>Domain\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Contact" Collapsed="true">
+    <Position X="8" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAQAQAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Domain\Contact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.EndWall" Collapsed="true">
+    <Position X="16" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Domain\EndWall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HangarEstimates.Domain.Request" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAwAAAAAAAABABAAAAAAAAQ=</HashCode>
+      <FileName>Domain\Request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="HangarEstimates.Domain.Catalogs.EWindPosition" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Catalogs\EWindPosition.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="HangarEstimates.Domain.ERequestCondition" Collapsed="true">
+    <Position X="6.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAggEAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\ERequestCondition.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

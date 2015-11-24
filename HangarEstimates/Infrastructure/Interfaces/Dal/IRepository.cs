@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace HangarEstimates.Infrastructure.Interfaces.Services
+namespace HangarEstimates.Infrastructure.Interfaces.Dal
 {
     public interface IRepository<T>
         where T: class 

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using HangarEstimates.Domain;
+using HangarEstimates.Infrastructure.Interfaces.Dal;
 using HangarEstimates.Infrastructure.Interfaces.Services;
 
 namespace HangarEstimates.Modules.DesignServices

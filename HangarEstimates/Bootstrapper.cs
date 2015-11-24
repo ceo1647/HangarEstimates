@@ -1,10 +1,13 @@
 ﻿using System.Windows;
+using HangarEstimates.Dal;
 using HangarEstimates.Modules.Catalogs;
 using HangarEstimates.Modules.ClientRequest;
 using HangarEstimates.Modules.ClientRequest.Design;
 using HangarEstimates.Modules.Contractors.Design;
 using HangarEstimates.Modules.DesignServices;
 using HangarEstimates.Modules.HangarEdit;
+using HangarEstimates.Modules.InfrastructureServices;
+using HangarEstimates.Modules.Services;
 using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.Prism.UnityExtensions;
@@ -41,12 +44,16 @@ namespace HangarEstimates
         protected override IModuleCatalog CreateModuleCatalog()
         {
             var catalog = new ModuleCatalog();
+
+            catalog.AddModule(typeof (InfrastructureServicesModule));
+            catalog.AddModule(typeof(DalModule));
+            catalog.AddModule(typeof(ServicesModule));
+
             catalog.AddModule(typeof(DesignServicesModule));
             catalog.AddModule(typeof(DesignClientRequestModule));
             catalog.AddModule(typeof (DesignContractorsModule));
             catalog.AddModule(typeof (HangarEditModule));
             catalog.AddModule(typeof (CatalogsModule));
-         
             return catalog;
         }
     }

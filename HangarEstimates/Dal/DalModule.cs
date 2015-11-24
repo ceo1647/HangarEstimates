@@ -1,4 +1,6 @@
 ﻿using HangarEstimates.Infrastructure.Composite;
+using HangarEstimates.Infrastructure.Interfaces.Dal;
+using Microsoft.Practices.Unity;
 
 namespace HangarEstimates.Dal
 {
@@ -6,7 +8,7 @@ namespace HangarEstimates.Dal
     {
         public override void Initialize()
         {
-            
+            Container.RegisterType<ISessionFactory>(new ContainerControlledLifetimeManager());
         }
     }
 }

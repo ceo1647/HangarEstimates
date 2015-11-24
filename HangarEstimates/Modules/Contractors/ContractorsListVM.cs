@@ -3,6 +3,7 @@ using System.Linq;
 using HangarEstimates.Domain;
 using HangarEstimates.Infrastructure;
 using HangarEstimates.Infrastructure.Composite;
+using HangarEstimates.Infrastructure.Interfaces.Dal;
 using HangarEstimates.Infrastructure.Interfaces.Services;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.ServiceLocation;

@@ -97,7 +97,11 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
@@ -106,7 +110,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -121,6 +127,7 @@
     </ApplicationDefinition>
     <Compile Include="Dal\DalModule.cs" />
     <Compile Include="Dal\Mapping\WindMap.cs" />
+    <Compile Include="Dal\NhibRepository.cs" />
     <Compile Include="Dal\SessionFactory.cs" />
     <Compile Include="Infrastructure\Interfaces\Dal\ISessionFactory.cs" />
     <Compile Include="Domain\Address.cs" />
@@ -157,7 +164,8 @@
     <Compile Include="Infrastructure\Converters\MarkupConverterBase.cs" />
     <Compile Include="Infrastructure\Converters\MultiValueMarkupConverterBase.cs" />
     <Compile Include="Infrastructure\Events\ChangeAcceptedEvent.cs" />
-    <Compile Include="Infrastructure\Interfaces\Services\IRepository.cs" />
+    <Compile Include="Infrastructure\Interfaces\Dal\IRepository.cs" />
+    <Compile Include="Infrastructure\Interfaces\Services\ISettingsService.cs" />
     <Compile Include="Infrastructure\Interfaces\Services\IYesNoUserAnswerService.cs" />
     <Compile Include="Infrastructure\MVVM\ObservableCollectionWrapper.cs" />
     <Compile Include="Infrastructure\RegionNames.cs" />
@@ -222,6 +230,9 @@
     <Compile Include="Modules\HangarEdit\HangarEditVm.cs" />
     <Compile Include="Infrastructure\MVVM\ItemVm.cs" />
     <Compile Include="Modules\HangarEdit\HangarVm.cs" />
+    <Compile Include="Modules\InfrastructureServices\InfrastructureServicesModule.cs" />
+    <Compile Include="Modules\Services\ServicesModule.cs" />
+    <Compile Include="Modules\InfrastructureServices\SettingsService.cs" />
     <Compile Include="ShellController.cs" />
     <Page Include="Infrastructure\Controls\KeyValueComboControl.xaml">
       <SubType>Designer</SubType>
@@ -342,6 +353,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Resource Include="HangarsDB.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="_DataBase\HangarsDB.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -360,11 +377,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="_Design\Domain.cd" />
     <None Include="_Design\Расчет Пример.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Domain\Services\" />
-    <Folder Include="_DataBase\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\background.jpg" />

@@ -9,6 +9,7 @@ using HangarEstimates.Domain.Catalogs;
 using HangarEstimates.Infrastructure;
 using HangarEstimates.Infrastructure.Composite;
 using HangarEstimates.Infrastructure.Events;
+using HangarEstimates.Infrastructure.Interfaces.Dal;
 using HangarEstimates.Infrastructure.Interfaces.Services;
 using HangarEstimates.Infrastructure.Utils;
 using Microsoft.Practices.Prism.Commands;

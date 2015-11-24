@@ -1,7 +1,9 @@
 ﻿using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using HangarEstimates.Dal.Mapping;
+using HangarEstimates.Infrastructure.Interfaces.Services;
 using NHibernate;
+using NHibernate.Tool.hbm2ddl;
 using ISessionFactory = HangarEstimates.Infrastructure.Interfaces.Dal.ISessionFactory;
 
 namespace HangarEstimates.Dal
@@ -11,9 +13,9 @@ namespace HangarEstimates.Dal
         private readonly string _connectionString;
         private NHibernate.ISessionFactory _factory;
 
-        public SessionFactory(string connectionString)
+        public SessionFactory(ISettingsService settingsService)
         {
-            _connectionString = connectionString;
+            _connectionString = settingsService.GetDataBaseConnectionString();
         }
 
         public NHibernate.ISessionFactory Factory
@@ -33,12 +35,13 @@ namespace HangarEstimates.Dal
         private NHibernate.ISessionFactory CreateFactory()
         {
             return Fluently.Configure()
-                    .Database(PostgreSQLConfiguration.Standard.ConnectionString(_connectionString))
-                    .Mappings(
-                        m =>
-                        m.FluentMappings.AddFromAssembly(
-                            typeof(WindMap).Assembly))
-                    .BuildSessionFactory();
+                .Database(MsSqlCeConfiguration.Standard.ConnectionString(_connectionString))
+                .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(true, true))
+                .Mappings(
+                    m =>
+                    m.FluentMappings.AddFromAssembly(
+                        typeof(WindMap).Assembly))
+                .BuildSessionFactory();
         }
     }
 }

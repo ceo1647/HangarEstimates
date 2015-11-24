@@ -5,6 +5,7 @@ using HangarEstimates.Domain;
 using HangarEstimates.Domain.Catalogs;
 using HangarEstimates.Domain.TU;
 using HangarEstimates.Infrastructure.Composite;
+using HangarEstimates.Infrastructure.Interfaces.Dal;
 using HangarEstimates.Infrastructure.Interfaces.Services;
 using HangarEstimates.Modules.ClientRequest.Design;
 using HangarEstimates.Modules.Contractors.Design;
