@@ -19,12 +19,14 @@ namespace HangarEstimates.Dal
 
         public IEnumerable<T> GetAll()
         {
-
+            using(var session = _sessionFactory.OpenSession())
+                return session.CreateCriteria(typeof(T)).List<T>();
         }
 
         public T Get(object id)
         {
-            throw new NotImplementedException();
+            using (var session = _sessionFactory.OpenSession())
+                return session.Get<T>(id);
         }
 
         public void Save(T obj)
@@ -49,7 +51,12 @@ namespace HangarEstimates.Dal
 
         public bool Remove(T obj)
         {
-            throw new NotImplementedException();
+            using (ISession session = _sessionFactory.OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                session.Delete(obj);
+                transaction.Commit();
+            }
         }
     }
 }
