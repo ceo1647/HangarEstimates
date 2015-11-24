@@ -8,7 +8,9 @@ namespace HangarEstimates.Dal
     {
         public override void Initialize()
         {
-            Container.RegisterType<ISessionFactory>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<ISessionFactory, SessionFactory>(new ContainerControlledLifetimeManager());
+            Container.RegisterType(typeof (IRepository<>), typeof (NhibRepository<>),
+                new ContainerControlledLifetimeManager());
         }
     }
 }

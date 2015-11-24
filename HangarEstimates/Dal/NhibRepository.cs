@@ -57,6 +57,8 @@ namespace HangarEstimates.Dal
                 session.Delete(obj);
                 transaction.Commit();
             }
+
+            return true;
         }
     }
 }

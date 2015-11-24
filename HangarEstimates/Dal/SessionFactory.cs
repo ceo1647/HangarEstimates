@@ -1,10 +1,9 @@
 ﻿using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using HangarEstimates.Dal.Mapping;
+using HangarEstimates.Infrastructure.Interfaces.Dal;
 using HangarEstimates.Infrastructure.Interfaces.Services;
-using NHibernate;
 using NHibernate.Tool.hbm2ddl;
-using ISessionFactory = HangarEstimates.Infrastructure.Interfaces.Dal.ISessionFactory;
 
 namespace HangarEstimates.Dal
 {
@@ -27,7 +26,7 @@ namespace HangarEstimates.Dal
             }
         }
 
-        public ISession OpenSession()
+        public NHibernate.ISession OpenSession()
         {
             return Factory.OpenSession();
         }
