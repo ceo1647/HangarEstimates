@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using HangarEstimates.Domain;
 using HangarEstimates.Infrastructure.Interfaces.Dal;
+using NHibernate;
+using ISessionFactory = HangarEstimates.Infrastructure.Interfaces.Dal.ISessionFactory;
 
 namespace HangarEstimates.Dal
 {
@@ -17,7 +19,7 @@ namespace HangarEstimates.Dal
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+
         }
 
         public T Get(object id)
@@ -27,12 +29,22 @@ namespace HangarEstimates.Dal
 
         public void Save(T obj)
         {
-            throw new NotImplementedException();
+            using (var session = _sessionFactory.OpenSession())
+            using (var transaction = session.BeginTransaction())
+            {
+                session.Update(obj);
+                transaction.Commit();
+            }
         }
 
         public void Add(T obj)
         {
-            throw new NotImplementedException();
+            using (var session = _sessionFactory.OpenSession())
+            using (var transaction = session.BeginTransaction())
+            {
+                session.Save(obj);
+                transaction.Commit();
+            }
         }
 
         public bool Remove(T obj)
