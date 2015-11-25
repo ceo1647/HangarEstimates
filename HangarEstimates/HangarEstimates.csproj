@@ -129,6 +129,8 @@
     <Compile Include="Dal\Mapping\WindMap.cs" />
     <Compile Include="Dal\NhibRepository.cs" />
     <Compile Include="Dal\SessionFactory.cs" />
+    <Compile Include="Domain\Expenditure\ExpenduleIntermediateItem.cs" />
+    <Compile Include="Domain\Expenditure\ExpenduleLineBase.cs" />
     <Compile Include="Domain\Materials\MaterialType.cs" />
     <Compile Include="Domain\Materials\Material.cs" />
     <Compile Include="Domain\Materials\Measurement.cs" />

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace HangarEstimates.Domain.Materials
+﻿namespace HangarEstimates.Domain.Materials
 {
-    public class Material
+    public class Material : BaseObject
     {
         public virtual MaterialType Type { get; set; }
         public virtual string TypeSize { get; set; }
