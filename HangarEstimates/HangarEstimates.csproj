@@ -129,6 +129,11 @@
     <Compile Include="Dal\Mapping\WindMap.cs" />
     <Compile Include="Dal\NhibRepository.cs" />
     <Compile Include="Dal\SessionFactory.cs" />
+    <Compile Include="Domain\Materials\MaterialType.cs" />
+    <Compile Include="Domain\Materials\Material.cs" />
+    <Compile Include="Domain\Materials\Measurement.cs" />
+    <Compile Include="Domain\Materials\MesurementType.cs" />
+    <Compile Include="Domain\Materials\TypeSize.cs" />
     <Compile Include="Infrastructure\Interfaces\Dal\ISessionFactory.cs" />
     <Compile Include="Domain\Address.cs" />
     <Compile Include="Domain\BankAccount.cs" />
