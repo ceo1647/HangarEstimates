@@ -12,6 +12,8 @@ namespace HangarEstimates.Test
             DalModule dal = new DalModule();
             var container = new UnityContainer();
 
+            container.RegisterInstance(typeof (IUnityContainer), container);
+
             container.RegisterType<ISettingsService, MockSettingsService>();
 
             dal.Container = container;

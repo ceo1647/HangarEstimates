@@ -1,64 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using HangarEstimates.Domain;
 using HangarEstimates.Infrastructure.Interfaces.Dal;
-using NHibernate;
-using ISessionFactory = HangarEstimates.Infrastructure.Interfaces.Dal.ISessionFactory;
+using Microsoft.Practices.Unity;
 
 namespace HangarEstimates.Dal
 {
-    public class NhibRepository<T> : IRepository<T>
-        where T : BaseObject
+    public class NhibRepository : IRepository
     {
-        private readonly ISessionFactory _sessionFactory;
+        private readonly IUnityContainer _container;
 
-        public NhibRepository(ISessionFactory sessionFactory)
+        public NhibRepository(IUnityContainer container)
         {
-            _sessionFactory = sessionFactory;
+            _container = container;
         }
 
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> GetAll<T>() where T : BaseObject
         {
-            using(var session = _sessionFactory.OpenSession())
-                return session.CreateCriteria(typeof(T)).List<T>();
+            return GetRepository<T>().GetAll();
         }
 
-        public T Get(object id)
+        public T Get<T>(object id) where T : BaseObject
         {
-            using (var session = _sessionFactory.OpenSession())
-                return session.Get<T>(id);
+            return GetRepository<T>().Get(id);
         }
 
-        public void Save(T obj)
+        public void Save<T>(T obj) where T : BaseObject
         {
-            using (var session = _sessionFactory.OpenSession())
-            using (var transaction = session.BeginTransaction())
-            {
-                session.Update(obj);
-                transaction.Commit();
-            }
+            GetRepository<T>().Save(obj);
         }
 
-        public void Add(T obj)
+        public void Add<T>(T obj) where T : BaseObject
         {
-            using (var session = _sessionFactory.OpenSession())
-            using (var transaction = session.BeginTransaction())
-            {
-                session.Save(obj);
-                transaction.Commit();
-            }
+            GetRepository<T>().Add(obj);
         }
 
-        public bool Remove(T obj)
+        public bool Remove<T>(T obj) where T : BaseObject
         {
-            using (ISession session = _sessionFactory.OpenSession())
-            using (ITransaction transaction = session.BeginTransaction())
-            {
-                session.Delete(obj);
-                transaction.Commit();
-            }
+            return GetRepository<T>().Remove(obj);
+        }
 
-            return true;
+        private IRepository<T> GetRepository<T>() where T : BaseObject
+        {
+            return _container.Resolve<IRepository<T>>();
         }
     }
 }

@@ -1018,7 +1018,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Смета"
         "ProductCode" = "8:{25BFA272-1435-4B30-8B06-7D712C8C1E30}"
-        "PackageCode" = "8:{A4D4E3D0-0593-4164-9E80-B50EB30FE0A2}"
+        "PackageCode" = "8:{D8838BDF-A5BD-4704-B13B-9B7351C7E535}"
         "UpgradeCode" = "8:{B1F61E6E-E4BC-4B11-9A91-0BA9291D2959}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

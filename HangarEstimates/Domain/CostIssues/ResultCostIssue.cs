@@ -2,8 +2,9 @@
 
 namespace HangarEstimates.Domain.CostIssues
 {
-    public class ResultCostIssue : CostIssueBase
+    public abstract class ResultCostIssue<T> : CostIssueBase
+        where T : CostIssueBase
     {
-        public IList<CostIssueBase> ChildIssues { get; set; }
+        public IList<T> ChildIssues { get; set; }
     }
 }

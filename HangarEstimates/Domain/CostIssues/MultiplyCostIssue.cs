@@ -1,8 +1,11 @@
-﻿namespace HangarEstimates.Domain.CostIssues
+﻿using System;
+
+namespace HangarEstimates.Domain.CostIssues
 {
-    public class MultiplyCostIssue : CostIssueBase
+    public interface IMultiplyCostIssue<T>
+        where T : CostIssueBase
     {
-        public double Count { get; set; }
-        public CostIssueBase CostIssue { get; set; }
+         double Count { get; set; }
+         T CostIssue { get; set; }
     }
 }

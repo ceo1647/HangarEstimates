@@ -11,6 +11,8 @@ namespace HangarEstimates.Dal
             Container.RegisterType<ISessionFactory, SessionFactory>(new ContainerControlledLifetimeManager());
             Container.RegisterType(typeof (IRepository<>), typeof (NhibRepository<>),
                 new ContainerControlledLifetimeManager());
+
+            Container.RegisterType<IRepository, NhibRepository>(new ContainerControlledLifetimeManager());
         }
     }
 }

@@ -126,18 +126,33 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Dal\DalModule.cs" />
+    <Compile Include="Dal\Mapping\CostIssues\CostIssueBaseMap.cs" />
+    <Compile Include="Dal\Mapping\CostIssues\JobCostIssueMap.cs" />
+    <Compile Include="Dal\Mapping\CostIssues\JobCountableIssueMap.cs" />
+    <Compile Include="Dal\Mapping\CostIssues\MaterialCostIssueMap.cs" />
+    <Compile Include="Dal\Mapping\CostIssues\MaterialCountableIssueMap.cs" />
+    <Compile Include="Dal\Mapping\HangarIssues\FoundationCostIssueMap.cs" />
+    <Compile Include="Dal\Mapping\Jobs\JobMap.cs" />
+    <Compile Include="Dal\Mapping\Materials\MaterialMap.cs" />
+    <Compile Include="Dal\Mapping\Materials\MeasurementMap.cs" />
+    <Compile Include="Dal\Mapping\Materials\MeasurementTypeMap.cs" />
     <Compile Include="Dal\Mapping\WindMap.cs" />
     <Compile Include="Dal\NhibRepository.cs" />
+    <Compile Include="Dal\NhibRepository.Generic.cs" />
     <Compile Include="Dal\SessionFactory.cs" />
     <Compile Include="Domain\CostIssues\CostIssueBase.cs" />
+    <Compile Include="Domain\CostIssues\JobCountableIssue.cs" />
+    <Compile Include="Domain\CostIssues\MaterialCountableIssue.cs" />
     <Compile Include="Domain\CostIssues\MultiplyCostIssue.cs" />
     <Compile Include="Domain\CostIssues\ResultCostIssue.cs" />
     <Compile Include="Domain\CostIssues\JobCostIssue.cs" />
+    <Compile Include="Domain\HangarIssues\FoundationCostIssue.cs" />
     <Compile Include="Domain\Jobs\Job.cs" />
     <Compile Include="Domain\Materials\Material.cs" />
     <Compile Include="Domain\CostIssues\MaterialCostIssue.cs" />
     <Compile Include="Domain\Materials\Measurement.cs" />
     <Compile Include="Domain\Materials\MeasurementType.cs" />
+    <Compile Include="Infrastructure\Interfaces\Dal\IRepository.cs" />
     <Compile Include="Infrastructure\Interfaces\Dal\ISessionFactory.cs" />
     <Compile Include="Domain\Address.cs" />
     <Compile Include="Domain\BankAccount.cs" />
@@ -173,7 +188,7 @@
     <Compile Include="Infrastructure\Converters\MarkupConverterBase.cs" />
     <Compile Include="Infrastructure\Converters\MultiValueMarkupConverterBase.cs" />
     <Compile Include="Infrastructure\Events\ChangeAcceptedEvent.cs" />
-    <Compile Include="Infrastructure\Interfaces\Dal\IRepository.cs" />
+    <Compile Include="Infrastructure\Interfaces\Dal\IRepository.Generic.cs" />
     <Compile Include="Infrastructure\Interfaces\Services\ISettingsService.cs" />
     <Compile Include="Infrastructure\Interfaces\Services\IYesNoUserAnswerService.cs" />
     <Compile Include="Infrastructure\MVVM\ObservableCollectionWrapper.cs" />
@@ -390,6 +405,7 @@
     <None Include="_Design\Расчет Пример.xlsx" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Bll\" />
     <Folder Include="Domain\Services\" />
   </ItemGroup>
   <ItemGroup>
