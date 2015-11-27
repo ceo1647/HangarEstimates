@@ -1,6 +1,6 @@
 ﻿namespace HangarEstimates.Domain.Materials
 {
-    public class MesurementType : BaseObject
+    public class MeasurementType : BaseObject
     {
         public virtual string Name { get; set; }
     }

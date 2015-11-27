@@ -4,6 +4,6 @@
     {
         public virtual string Name { get; set; }
         public virtual string TypeSize { get; set; }
-        public virtual MesurementType MesurementType { get; set; }
+        public virtual MeasurementType MesurementType { get; set; }
     }
 }
