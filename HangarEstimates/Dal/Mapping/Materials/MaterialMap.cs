@@ -1,4 +1,5 @@
 ﻿using FluentNHibernate.Mapping;
+using HangarEstimates.Domain.Costs;
 using HangarEstimates.Domain.Materials;
 
 namespace HangarEstimates.Dal.Mapping.Materials

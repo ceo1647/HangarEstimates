@@ -1,5 +1,8 @@
-﻿namespace HangarEstimates.Domain.Materials
+﻿using PropertyChanged;
+
+namespace HangarEstimates.Domain.Materials
 {
+    [ImplementPropertyChanged]
     public class Measurement : BaseObject
     {
         public virtual string ShortName { get; set; }

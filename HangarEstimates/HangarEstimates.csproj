@@ -80,6 +80,10 @@
       <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NHibernate.PropertyChanged, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=f94377bef688b4ba, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.PropertyChanged.4.0.0.4000\lib\net40\NHibernate.PropertyChanged.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Npgsql, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.2.2.7\lib\net40\Npgsql.dll</HintPath>
       <Private>True</Private>
@@ -125,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Domain\CostIssues\FoundationCostIssue.cs" />
+    <Compile Include="Domain\Issues\IssueBase.cs" />
+    <Compile Include="Domain\MeasuredValue.cs" />
+    <Compile Include="Infrastructure\Interfaces\Services\FoundationCostIssueService.cs" />
     <Compile Include="Dal\DalModule.cs" />
     <Compile Include="Dal\Mapping\CostIssues\CostIssueBaseMap.cs" />
     <Compile Include="Dal\Mapping\CostIssues\JobCostIssueMap.cs" />
@@ -141,15 +149,13 @@
     <Compile Include="Dal\NhibRepository.Generic.cs" />
     <Compile Include="Dal\SessionFactory.cs" />
     <Compile Include="Domain\CostIssues\CostIssueBase.cs" />
-    <Compile Include="Domain\CostIssues\JobCountableIssue.cs" />
-    <Compile Include="Domain\CostIssues\MaterialCountableIssue.cs" />
     <Compile Include="Domain\CostIssues\MultiplyCostIssue.cs" />
     <Compile Include="Domain\CostIssues\ResultCostIssue.cs" />
-    <Compile Include="Domain\CostIssues\JobCostIssue.cs" />
-    <Compile Include="Domain\HangarIssues\FoundationCostIssue.cs" />
-    <Compile Include="Domain\Jobs\Job.cs" />
-    <Compile Include="Domain\Materials\Material.cs" />
-    <Compile Include="Domain\CostIssues\MaterialCostIssue.cs" />
+    <Compile Include="Domain\CostIssues\JobIssue.cs" />
+    <Compile Include="Domain\Issues\Foundation.cs" />
+    <Compile Include="Domain\Issues\Job.cs" />
+    <Compile Include="Domain\Issues\Material.cs" />
+    <Compile Include="Domain\CostIssues\MaterialIssue.cs" />
     <Compile Include="Domain\Materials\Measurement.cs" />
     <Compile Include="Domain\Materials\MeasurementType.cs" />
     <Compile Include="Infrastructure\Interfaces\Dal\IRepository.cs" />
@@ -405,8 +411,10 @@
     <None Include="_Design\Расчет Пример.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Bll\" />
+    <Folder Include="Domain\HangarIssues\" />
+    <Folder Include="Domain\NewFolder1\" />
     <Folder Include="Domain\Services\" />
+    <Folder Include="Modules\Catalogs\Issues\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\background.jpg" />

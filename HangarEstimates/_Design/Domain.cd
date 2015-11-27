@@ -101,7 +101,7 @@
   <Class Name="HangarEstimates.Domain.BaseObject" Collapsed="true">
     <Position X="14.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACEAAAAAAAAIAAoAgAAAAAgAAAAIAAAEAAAAAAAAA=</HashCode>
       <FileName>Domain\BaseObject.cs</FileName>
     </TypeIdentifier>
   </Class>

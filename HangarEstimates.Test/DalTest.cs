@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using HangarEstimates.Domain.Catalogs;
 using HangarEstimates.Domain.CostIssues;
+using HangarEstimates.Domain.Costs;
 using HangarEstimates.Domain.HangarIssues;
 using HangarEstimates.Domain.Materials;
 using HangarEstimates.Infrastructure.Interfaces.Dal;
@@ -57,6 +58,7 @@ namespace HangarEstimates.Test
             };
             repository.Add(listMaterial);
 
+
             var listMaterial2 = new Material
             {
                 MesurementType = squere,
@@ -66,7 +68,7 @@ namespace HangarEstimates.Test
             repository.Add(listMaterial2);
 
 
-            var materialIssue = new MaterialCostIssue
+            var materialIssue = new MaterialIssue
             {
                 Material = listMaterial,
                 Measurement = squereMeters,
@@ -74,7 +76,7 @@ namespace HangarEstimates.Test
             };
             repository.Add(materialIssue);
 
-            var materialIssue2 = new MaterialCostIssue
+            var materialIssue2 = new MaterialIssue
             {
                 Material = listMaterial2,
                 Measurement = squereMeters,
@@ -82,20 +84,26 @@ namespace HangarEstimates.Test
             };
             repository.Add(materialIssue2);
 
-            var materialCountableIssue = new MaterialCountableIssue {CostIssue = materialIssue, Count = 2};
+            var materialCountableIssue = new MaterialCountableIssue
+            {
+                CostIssue = materialIssue, 
+                Count = 2
+            };
             repository.Add(materialCountableIssue);
-            var materialCountableIssue2 = new MaterialCountableIssue {CostIssue = materialIssue2, Count = 5};
+
+            var materialCountableIssue2 = new MaterialCountableIssue
+            {
+                CostIssue = materialIssue2, 
+                Count = 5
+            };
             repository.Add(materialCountableIssue2);
 
             var foundationIssue = new FoundationCostIssue
             {
                 FoundationName = "Фундамент тип 1",
-                MaterialIssues = new List<MaterialCountableIssue>
-                {
-                    materialCountableIssue,
-                    materialCountableIssue2
-                },
             };
+            foundationIssue.AddMaterialIssue(materialIssue, 2);
+            foundationIssue.AddMaterialIssue(materialIssue2, 3);
             repository.Add(foundationIssue);
         }
     }

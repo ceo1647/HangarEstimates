@@ -3,7 +3,7 @@ using HangarEstimates.Domain.CostIssues;
 
 namespace HangarEstimates.Dal.Mapping.CostIssues
 {
-    public class MaterialCostIssueMap : SubclassMap<MaterialCostIssue>
+    public class MaterialCostIssueMap : SubclassMap<MaterialIssue>
     {
         public MaterialCostIssueMap()
         {

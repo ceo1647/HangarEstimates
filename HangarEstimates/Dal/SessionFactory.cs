@@ -3,6 +3,7 @@ using FluentNHibernate.Cfg.Db;
 using HangarEstimates.Dal.Mapping;
 using HangarEstimates.Infrastructure.Interfaces.Dal;
 using HangarEstimates.Infrastructure.Interfaces.Services;
+using NHibernate.PropertyChanged;
 using NHibernate.Tool.hbm2ddl;
 
 namespace HangarEstimates.Dal
@@ -40,6 +41,7 @@ namespace HangarEstimates.Dal
                     m =>
                     m.FluentMappings.AddFromAssembly(
                         typeof(WindMap).Assembly))
+                .ProxyFactoryFactory<PropertyChangedProxyFactoryFactory>()
                 .BuildSessionFactory();
         }
     }

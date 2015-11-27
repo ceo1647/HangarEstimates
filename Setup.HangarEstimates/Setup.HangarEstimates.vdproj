@@ -33,6 +33,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_27F9706BF88A55B43054AD9F6DCAFC8D"
+        "OwnerKey" = "8:_78EAE69EE98740EB8402C7F02631C962"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_32922141A4E00AE516A255CFA493FF50"
         "OwnerKey" = "8:_78EAE69EE98740EB8402C7F02631C962"
         "MsmSig" = "8:_UNDEFINED"
@@ -101,6 +107,12 @@
         {
         "MsmKey" = "8:_6252ED81B3A7E42E71F825D922409EA3"
         "OwnerKey" = "8:_32922141A4E00AE516A255CFA493FF50"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6252ED81B3A7E42E71F825D922409EA3"
+        "OwnerKey" = "8:_27F9706BF88A55B43054AD9F6DCAFC8D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -227,6 +239,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_78EAE69EE98740EB8402C7F02631C962"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_27F9706BF88A55B43054AD9F6DCAFC8D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -437,6 +455,37 @@
                     }
                 }
             "SourcePath" = "8:System.Windows.Interactivity.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_5ED140F0A3074F06ABFD87D14DFCF3AA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_27F9706BF88A55B43054AD9F6DCAFC8D"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:NHibernate.PropertyChanged, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=f94377bef688b4ba, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_27F9706BF88A55B43054AD9F6DCAFC8D"
+                    {
+                    "Name" = "8:NHibernate.PropertyChanged.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:NHibernate.PropertyChanged.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5ED140F0A3074F06ABFD87D14DFCF3AA"
@@ -1018,7 +1067,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Смета"
         "ProductCode" = "8:{25BFA272-1435-4B30-8B06-7D712C8C1E30}"
-        "PackageCode" = "8:{D8838BDF-A5BD-4704-B13B-9B7351C7E535}"
+        "PackageCode" = "8:{9BCC95C8-6262-45EA-8814-3F4B9D0DEB3D}"
         "UpgradeCode" = "8:{B1F61E6E-E4BC-4B11-9A91-0BA9291D2959}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

@@ -1,4 +1,5 @@
 ﻿using System;
+using PropertyChanged;
 
 namespace HangarEstimates.Domain.CostIssues
 {
